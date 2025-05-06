@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formula OCR to LaTeX</title>
+</head>
+<body>
+    <h1>Upload a Formula Screenshot</h1>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="image" required>
+        <button type="submit">Extract LaTeX</button>
+    </form>
+    {% if latex_output %}
+        <h2>Recognized LaTeX:</h2>
+        <pre>{{ latex_output }}</pre>
+    {% endif %}
+</body>
+</html>
